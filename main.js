@@ -72,41 +72,49 @@ function main() {
     let te = splited[0]+splited[1];
 
     if (splited.length <= 4 && splited[0]==0) {
+        document.getElementById("output").innerHTML = ' ';
         document.getElementById("output").innerHTML += `${splited[2]}${splited[3]} Коп.`;
     } else if (splited.length <= 4 && splited[0] in units) {
         let unit = (units[splited[0]]);
         let hr = (hriv[splited[0]]);
+        document.getElementById("output").innerHTML = ' ';
         document.getElementById("output").innerHTML += `${unit} ${hr}, ${splited[2]}${splited[3]} Коп.`;
     } else if (splited.length <= 5 && te >= 10 && te <= 14){
         res = parseInt(te);
         let teen = (teens[te]);
+        document.getElementById("output").innerHTML = ' ';
         document.getElementById("output").innerHTML += `${teen} Гривень, ${splited[3]}${splited[4]} Коп.`;
     } else if (splited.length <= 5 && splited[0] == 1) {
         let res = splited[0] + splited[1];
         res = parseInt(res);
         let teen = (teens[res]);
         let hr = (hriv[splited[1]]);
+        document.getElementById("output").innerHTML = ' ';
         document.getElementById("output").innerHTML += `${teen} ${hr}, ${splited[3]}${splited[4]} Коп.`;
     } else if (splited.length <= 5 && splited[0] > 1) {
         let dec = (decim[splited[0]]);
         let unit = (units[splited[1]]);
         let hr = (hriv[splited[1]]);
+        document.getElementById("output").innerHTML = ' ';
         document.getElementById("output").innerHTML += `${dec} ${unit} ${hr}, ${splited[3]}${splited[4]} Коп.`;
     } else if (splited.length <=6 && splited[1] == 0){
         let hund = (hundr[splited[0]]);
         let unit = (units[splited[2]]);
         let hr = (hriv[splited[2]]);
+        document.getElementById("output").innerHTML = ' ';
         document.getElementById("output").innerHTML += `${hund} ${unit} ${hr}, ${splited[4]}${splited[5]} Коп.`;
     } else if (splited.length <=6 && splited[1] == 1 && splited[1]+splited[2]>=10 && splited[1]+splited[2]<=14) {
         let hund = (hundr[splited[0]]);
         let res = splited[1] + splited[2]
         let teen = (teens[res]);
+        document.getElementById("output").innerHTML = ' ';
         document.getElementById("output").innerHTML += `${hund} ${teen} Гривень, ${splited[4]}${splited[5]} Коп.`;
     } else if (splited.length <=6 && splited[1] > 1){
         let hund = (hundr[splited[0]]);
         let dec = (decim[splited[1]])
         let unit = (units[splited[2]]);
         let hr = (hriv[splited[2]]);
+        document.getElementById("output").innerHTML = ' ';
         document.getElementById("output").innerHTML += `${hund} ${dec} ${unit} ${hr}, ${splited[4]}${splited[5]} Коп.`;
 
     }
