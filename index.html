@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+
+        .jumbotron {
+            position: absolute;
+            width: 1000px;
+
+            top: 30vh;
+            left: 20vw;
+
+        }
+
+    </style>
+  </head>
+  <body>
+    
+    <div class="jumbotron">
+        <h1>IKAO converter</h1>
+        <p>Pilot</p>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="input" placeholder="Callsign" aria-label="Insert callsign here" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="return" onclick="main()">Button</button>
+            </div>
+          </div>
+
+          <h4>Your Callsign: <span class="badge badge-secondary" id="output"></span></h4>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
