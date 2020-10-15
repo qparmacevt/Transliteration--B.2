@@ -115,7 +115,7 @@ function main() {
         let teen = (teens[res]);
         let hr = (hriv[splited[2]]);
         document.getElementById("output").innerHTML = ' ';
-        document.getElementById("output").innerHTML += `${hund} ${teen} ${hr} Гривень, ${splited[4]}${splited[5]} Коп.`;
+        document.getElementById("output").innerHTML += `${hund} ${teen} ${hr}, ${splited[4]}${splited[5]} Коп.`;
     }else if (splited.length <=6 && splited[1] > 1){
         let hund = (hundr[splited[0]]);
         let dec = (decim[splited[1]])
