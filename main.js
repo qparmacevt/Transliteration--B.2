@@ -12,7 +12,6 @@ function main() {
         '7': 'Сімсот',
         '8': 'Вісімсот',
         '9': "Дев'ятсот",
-
     }
 
     let decim = {
@@ -38,7 +37,6 @@ function main() {
         '8': 'Вісім',
         '9': "Дев'ять",
         '0': '',
-        
     }
 
     let teens = {
@@ -65,24 +63,14 @@ function main() {
         '8': 'Гривень',
         '9': 'Гривень',
         '0': 'Гривень',
-        
     }
 
-    console.log(hundr);
-    console.log(decim);
-    console.log(units);
-    console.log(teens);
-
+    
     let value = parseFloat(document.getElementById("input").value);
-    console.log(value);
     value = value.toFixed(2);
-    console.log(value);
     let splited  = value.split('');
-    console.log(splited);
     let te = splited[0]+splited[1];
-    console.log(te);
 
-    //
     if (splited.length <= 4 && splited[0]==0) {
         document.getElementById("output").innerHTML += `${splited[2]}${splited[3]} Коп.`;
     } else if (splited.length <= 4 && splited[0] in units) {
@@ -92,15 +80,11 @@ function main() {
     } else if (splited.length <= 5 && te >= 10 && te <= 14){
         res = parseInt(te);
         let teen = (teens[te]);
-        console.log(teen);
         document.getElementById("output").innerHTML += `${teen} Гривень, ${splited[3]}${splited[4]} Коп.`;
     } else if (splited.length <= 5 && splited[0] == 1) {
         let res = splited[0] + splited[1];
-        console.log(res);
-        console.log(typeof(res));
         res = parseInt(res);
         let teen = (teens[res]);
-        console.log(teen);
         let hr = (hriv[splited[1]]);
         document.getElementById("output").innerHTML += `${teen} ${hr}, ${splited[3]}${splited[4]} Коп.`;
     } else if (splited.length <= 5 && splited[0] > 1) {
@@ -113,7 +97,6 @@ function main() {
         let unit = (units[splited[2]]);
         let hr = (hriv[splited[2]]);
         document.getElementById("output").innerHTML += `${hund} ${unit} ${hr}, ${splited[4]}${splited[5]} Коп.`;
-
     } else if (splited.length <=6 && splited[1] == 1 && splited[1]+splited[2]>=10 && splited[1]+splited[2]<=14) {
         let hund = (hundr[splited[0]]);
         let res = splited[1] + splited[2]
@@ -127,10 +110,5 @@ function main() {
         document.getElementById("output").innerHTML += `${hund} ${dec} ${unit} ${hr}, ${splited[4]}${splited[5]} Коп.`;
 
     }
-
-    /*for (let i = 0; i<=splited.length; i++) {
-
-
-    }*/
 
 }
